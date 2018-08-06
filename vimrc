@@ -71,10 +71,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_javascript_checkers = ['jsxhint']
 "let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+"let g:syntastic_css_checkers = ['stylelint']
+"let g:syntastic_less_checkers = ['stylelint']
 
 
 "=== Tern ===
@@ -116,10 +118,19 @@ set cursorcolumn  " enable the vertical line
 highlight CursorColumn   cterm=NONE ctermbg=darkgrey ctermfg=lightgrey guibg=darkgrey guifg=NONE
 
 "=== JSX Higlighting ===
+" https://github.com/mxw/vim-jsx
 let g:jsx_ext_required = 0
+
+"=== vim-illuminate ===
+" https://github.com/RRethy/vim-illuminate
+let g:Illuminate_delay = 1000
+hi illuminatedWord ctermbg=darkgrey ctermfg=lightgreen
 
 "=== Preferences ===
 syntax enable
+highlight Boolean ctermfg=darkgreen
+highlight LineNr ctermfg=darkgrey
+highlight Operator ctermfg=grey
 set laststatus=2
 set pastetoggle=<F2>
 set ts=4
@@ -132,4 +143,6 @@ set encoding=utf-8
 set noswapfile
 set autoread
 set nocompatible
-highlight LineNr ctermfg=darkgrey
+set exrc
+set secure
+set backupcopy=yes
